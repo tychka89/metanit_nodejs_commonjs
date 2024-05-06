@@ -1,12 +1,10 @@
-const os = require('os');
-const greeting = require('./greeting');
-const User = require('./user');
+const nodePath = process.argv[0];
+const appPath = process.argv[1];
+const username = process.argv[2];
+const userage = process.argv[3];
 
-const userName = os.userInfo().username;
-
-console.log(`Дата запроса: ${greeting.date}`);
-greeting.printMessage(userName);
-
-const nata = new User('Nata', 35);
-nata.print();
-nata.sayHi();
+console.log('nodePath:', nodePath);
+console.log('appPath', appPath);
+console.log();
+console.log('name:', username);
+console.log('age:', userage);
